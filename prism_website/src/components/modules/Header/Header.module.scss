@@ -1,18 +1,28 @@
 .header {
+  display: flex;
   position: absolute;
   width: 100vw;
   top: 0;
   left: 0;
   z-index: 50;
   background-color: #fff;
-  box-shadow: 0px 4px 8px 0px rgba(62, 128, 250, 0.2);
+  box-shadow: 0px 2px 4px 0px rgba(36, 43, 58, 1);
   padding: 26px 0 26px;
+  // border-bottom: 1px solid #242B3A;
+
+  @media screen and (min-width: 1366px) {
+    justify-content: center;
+  }
 
   img {
     margin: 0 0 0 80px;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 810px) {
       margin: 0 0 0 26px;
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin: 0 0 0 -160px;
     }
   }
 

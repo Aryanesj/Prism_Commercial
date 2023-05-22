@@ -5,7 +5,7 @@ const IntroSection = () => {
     return (
         <div className={styles.header}>
             <div className="container">
-                <h1>Prism</h1>
+                <h1>Intro Prism Section will be soon...</h1>
             </div>
         </div>
     )

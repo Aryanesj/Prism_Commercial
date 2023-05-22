@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+.legalPersons {
+  border-top: 1px solid #242b3a;
+  padding: 56px 0 0;
+
+  &__headline {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #242b3a;
+    margin: 0 0 56px 80px;
+
+    br {
+      display: none;
+
+      @media screen and (max-width: 375px) {
+        display: inline;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      display: flex;
+      justify-content: center;
+      margin-right: 620px;
+    }
+
+    @media screen and (max-width: 680px) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    @media screen and (max-width: 470px) {
+      margin: 0 0 56px 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__cardsList {
+    display: flex;
+    margin: 0 0 40px 0;
+    justify-content: center;
+    border-top: 1px solid #242b3a;
+    border-bottom: 1px solid #242b3a;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 375px) {
+      border-top: none;
+    }
+  }
+
+  &__cardsItem {
+    width: 410px;
+    height: 320px;
+    border-right: 1px solid gray;
+
+    @media screen and (max-width: 768px) {
+      border-right: none;
+      border-bottom: 1px solid #242b3a;
+      width: 100%;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @media screen and (max-width: 375px) {
+      height: 248px;
+    }
+  }
+
+  &__cardNumber {
+    display: block;
+    font-family: "Roboto Mono";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    color: #3d38e7;
+    text-align: left;
+    margin: 16px 0 8px 24px;
+
+    @media screen and (max-width: 375px) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__cardTitle {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #3b404b;
+    margin: 0 24px 32px 24px;
+
+    @media screen and (max-width: 810px) {
+      margin: 0 114px 2px 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      margin: 0 114px 16px 24px;
+    }
+  }
+
+  &__cardText {
+    display: block;
+    height: 98px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #5b6273;
+    text-align: left;
+    margin: 0 30px 44px 24px;
+
+    @media screen and (max-width: 768px) {
+      margin: 30px 250px 14px 24px;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 30px 160px 14px 24px;
+    }
+
+    @media screen and (max-width: 468px) {
+      margin: 30px 100px 14px 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      margin: 0 20px 0px 24px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 0 0 24px;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    outline: none;
+    background: transparent;
+    border-radius: 4px;
+    transition: 0.3s;
+    color: #242b3a;
+
+    &:hover {
+      border-color: #abb7fa;
+      background: #abb7fa;
+      color: #0500a6;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__arrowRight {
+    margin: 0 0 0 11px;
+  }
+}

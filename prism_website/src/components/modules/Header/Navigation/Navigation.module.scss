@@ -12,16 +12,17 @@
   ul {
     @media (max-width: 990px) {
       position: absolute;
-      top: 110px;
+      top: 104px;
       right: 0;
       width: 100%;
       background-color: #ffff;
       padding: 52px 0;
       min-height: calc(10vh - 26px);
       height: fit-content;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #242b3a;
 
       li {
+        line-height: 24px;
         text-align: left;
         padding-top: 40px;
         margin: 0 0 0 56px;

@@ -6,10 +6,10 @@
 }
 
 .wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 html,
 body {
@@ -52,39 +52,39 @@ button {
 }
 
 .container {
-  // width: 320px;
+  width: 320px;
   margin: 0 auto;
 
-  // @media screen and (max-width: 355px) {
-  //   width: 285px;
-  // }
+  @media screen and (max-width: 355px) {
+    width: 285px;
+  }
 
-  // @media (min-width: 700px) {
-  //   width: 600px;
-  // }
+  @media (min-width: 700px) {
+    width: 600px;
+  }
 
-  // @media (min-width: 990px) {
-  //   width: 840px;
-  // }
+  @media (min-width: 990px) {
+    width: 840px;
+  }
 
-  // @media (min-width: 1200px) {
-  //   width: 1050px;
-  // }
+  @media (min-width: 1200px) {
+    width: 1050px;
+  }
 
-  // @media (min-width: 1440px) {
-  //   width: 1170px;
-  // }
+  @media (min-width: 1440px) {
+    width: 1170px;
+  }
 }
 
-/* ::-webkit-scrollbar {
-    width: 5px;
-} */
+::-webkit-scrollbar {
+  width: 4px;
+}
 
 ::-webkit-scrollbar-track {
-  background: #181616;
+  background: #ffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3d38e7;
+  background: #abb7fa;
   border-radius: 8px;
 }
