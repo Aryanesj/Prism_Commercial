@@ -1,6 +1,300 @@
 .tools {
   display: block;
-  text-align: center;
-  color: teal;
-  padding: 64px 0 0;
+  padding: 64px 0 80px;
+  border-bottom: 1px solid #242b3a;
+
+  @media screen and (min-width: 724px) {
+    padding: 64px 0 110px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    width: 1366px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .tools__text_last {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 734px) {
+    .tools__text_extraMargin {
+      margin-bottom: 86px;
+    }
+  }
+
+  &__container {
+    margin: 0 0 0 80px;
+
+    @media screen and (max-width: 450px) {
+      margin: 0 0 0 24px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.01em;
+      color: #242b3a;
+      margin: 0 30px 32px 0;
+
+      @media screen and (max-width: 810px) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        margin: 0 30px 24px 0;
+      }
+    }
+  }
+
+  &__p1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #5b6273;
+    margin: 0 30px 22px 0;
+
+    @media screen and (max-width: 810px) {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 30px 16px 0;
+    }
+
+    span {
+      background-color: #ffffa9;
+      padding: 3px 0;
+    }
+  }
+
+  &__p2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #5b6273;
+    margin: 0 30px 78px 0;
+
+    @media screen and (max-width: 810px) {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 30px 64px 0;
+    }
+
+    @media screen and (max-width: 350px) {
+      margin: 0 10px 64px 0;
+    }
+  }
+
+  &__arrowRight {
+    margin: 0 0 -3px 0px;
+  }
+
+  &__arrowRightBtn {
+    width: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0 24px;
+  }
+
+  &__divMain {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0 40px;
+
+    @media screen and (max-width: 724px) {
+      display: none;
+    }
+  }
+
+  &__div1 {
+    background: #3b404b;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 4px 14px;
+  }
+
+  &__div2 {
+    background: #3b404b;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 4px 14px;
+    margin: 0 80px 0 82px;
+
+    @media screen and (max-width: 890px) {
+      margin: 0 80px 0 16px;
+    }
+  }
+
+  &__secondaryMainDiv {
+    position: relative;
+  }
+
+  &__div3 {
+    position: absolute;
+    display: none;
+    background: #3b404b;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 4px 14px;
+    margin: -84px 0 0 30px;
+
+    @media screen and (max-width: 724px) {
+      display: inline;
+    }
+  }
+
+  &__div4 {
+    position: absolute;
+    display: none;
+    background: #3b404b;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 4px 14px;
+    margin: -84px 0 0 30px;
+
+    @media screen and (max-width: 724px) {
+      display: inline;
+    }
+  }
+
+  &__div5 {
+    position: absolute;
+    display: none;
+    background: #3b404b;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding: 4px 14px;
+    margin: 0px 0 0 30px;
+
+    @media screen and (max-width: 724px) {
+      display: inline;
+    }
+  }
+
+  &__item {
+    margin: 0 0 0 80px;
+
+    @media screen and (max-width: 450px) {
+      margin: 0 0 0 30px;
+    }
+  }
+
+  &__itemHeader {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    align-self: flex-start;
+    margin: 0 11px 0 0;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #3b404b;
+    margin: -6px 0 0 0;
+
+    @media screen and (max-width: 810px) {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+    }
+
+    @media screen and (max-width: 724px) {
+      margin: -1px 12px 0 0;
+    }
+  }
+
+  &__text {
+    width: 641px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #5b6273;
+    margin: 16px 0 48px 31px;
+
+    @media screen and (max-width: 1080px) {
+      width: 400px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: 890px) {
+      width: 280px;
+    }
+
+    @media screen and (max-width: 810px) {
+      width: 229px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @media screen and (max-width: 724px) {
+      width: 400px;
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 310px;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 229px;
+    }
+  }
+
+  &__acceptIcons {
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: 150px;
+
+    @media screen and (max-width: 724px) {
+      display: none;
+    }
+  }
+
+  &__acceptIconOne {
+    align-self: flex-start;
+  }
+
+  &__acceptIconTwo {
+    align-self: flex-start;
+    margin: 0 0 0 220px;
+
+    @media screen and (max-width: 890px) {
+      margin: 0 0 0 155px;
+    }
+  }
 }
