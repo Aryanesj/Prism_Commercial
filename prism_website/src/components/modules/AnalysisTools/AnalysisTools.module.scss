@@ -1,7 +1,6 @@
 .tools {
   display: block;
   padding: 64px 0 80px;
-  border-bottom: 1px solid #242b3a;
 
   @media screen and (min-width: 724px) {
     padding: 64px 0 110px;
@@ -243,6 +242,10 @@
     letter-spacing: 0.03em;
     color: #5b6273;
     margin: 16px 0 48px 31px;
+
+    @media screen and (max-width: 1360px) {
+      width: 700px;
+    }
 
     @media screen and (max-width: 1080px) {
       width: 400px;
