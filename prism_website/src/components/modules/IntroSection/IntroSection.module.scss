@@ -1,5 +1,122 @@
-.header {
-  margin: 100px 0 30px;
-  text-align: center;
-  color: teal;
+.intro {
+  height: 720px;
+  background: url("../../../images/IntroSection/Group.svg") no-repeat,
+    url("../../../images/IntroSection/Gradient.png") no-repeat,
+    url("../../../images/IntroSection/Tokyo.jpg") no-repeat right;
+  background-size: 32px 32px, 100% auto, auto 720px;
+  background-position: 490px 500px, calc(100% - 65px) 75px,
+    calc(100% - 65px) 75px;
+  max-width: 1400px;
+  padding: 212px 0 0;
+  margin: 0 auto;
+
+  @media (max-width: 1078px) {
+    background-position: 490px 500px, calc(100% - 65px) 75px,
+      calc(100% + 265px) 75px;
+  }
+
+  @media (max-width: 827px) {
+    background-position: 490px 500px, calc(100% - 65px) 75px,
+      calc(100% + 410px) 75px;
+  }
+
+  @media (max-width: 680px) {
+    background: url("../../../images/IntroSection/Gradient.png") no-repeat,
+      url("../../../images/IntroSection/Tokyo.jpg") no-repeat;
+    background-size: 180% auto, auto 700px;
+    background-position: bottom center, calc(100% + 50px) 240px;
+  }
+
+  @media (max-width: 375px) {
+    background-size: 180% auto, auto 455px;
+    background-position: bottom center, calc(100% + 50px) 375px;
+    padding: 186px 0 0;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 122px;
+    line-height: 142px;
+    letter-spacing: 0.01em;
+    color: #242b3a;
+    text-transform: uppercase;
+    margin: 0 0 0 80px;
+
+    @media (max-width: 680px) {
+      font-size: 64px;
+      line-height: 75px;
+      margin: 0 0 0 24px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #677184;
+    margin: 0 0 0 80px;
+
+    @media (max-width: 680px) {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+      margin: 0 0 0 24px;
+    }
+  }
+
+  &__btn {
+    display: inline;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    outline: none;
+    background: #3e38f0;
+    border-radius: 4px;
+    transition: 0.3s;
+    color: #ffff;
+    margin: 56px 0 0 80px;
+
+    br {
+      display: none;
+
+      @media (max-width: 375px) {
+        display: inline;
+      }
+    }
+
+    &:hover {
+      border-color: #5652f6;
+      background: #5652f6;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      background: #5652f6;
+    }
+
+    @media (max-width: 680px) {
+      margin: 72px 0 0 24px;
+    }
+
+    @media (max-width: 324px) {
+      margin: 52px 0 0 24px;
+    }
+
+    @media (max-width: 375px) {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+  }
+
+  &__arrowRight {
+    display: inline;
+    margin: 0 0 -4px 14px;
+
+    @media (max-width: 375px) {
+      margin: -20px 0 10px 167px;
+    }
+  }
 }

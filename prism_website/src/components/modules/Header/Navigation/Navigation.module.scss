@@ -55,11 +55,15 @@
 .hamburger {
   position: absolute;
   top: 40px;
-  right: 44px;
+  right: 96px;
   cursor: pointer;
   user-select: none;
 
   @media (min-width: 990px) {
     display: none;
+  }
+
+  @media (max-width: 690px) {
+    right: 40px;
   }
 }
