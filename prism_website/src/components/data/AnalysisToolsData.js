@@ -17,7 +17,7 @@ import Icon16 from '../../images/AnalysisTools/16.svg';
 import AcceptIcon from '../../images/AnalysisTools/Accept.svg'
 
 export const analysisToolsData = [
-    { icon: Icon1, title: 'Формування анкети', acceptOne: AcceptIcon, acceptTwo: AcceptIcon, text: 'Враховуються такі дані як реєстраційні дані, статус, види дільності, статуний капітал, адреса та інші' },
+    { icon: Icon1, title: 'Формування анкети', acceptOne: AcceptIcon, acceptTwo: AcceptIcon, text: 'Враховуються такі дані як реєстраційні дані, статус, види дільності, статутний капітал, адреса та інші' },
     { icon: Icon2, title: 'Перевірка реєстрів ДФС', acceptOne: AcceptIcon, acceptTwo: AcceptIcon, text: 'Пошук та відображення інформації щодо податкового боргу, системи оподаткування, запланованих перевірок' },
     { icon: Icon3, title: 'Перевірка санкційних списків', acceptOne: AcceptIcon, acceptTwo: AcceptIcon, text: 'Перевірка наявності санкцій в Україні, США, Європі ' },
     { icon: Icon4, title: 'Аналіз учасників юридичної особи', acceptOne: AcceptIcon, acceptTwo: AcceptIcon, text: 'Відображення інформації про засновників, бенефіціарів, керівників, підписантів' },
