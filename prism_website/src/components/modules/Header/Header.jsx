@@ -3,7 +3,7 @@ import Navigation from './Navigation/Navigation.jsx'
 import logo from '../../../images/Header/PrismLogo.svg'
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = ({ onFooterButtonClick }) => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
@@ -17,7 +17,7 @@ const Header = () => {
                             <img src={logo} alt="Prism logo" />
                         </a>
                     </div>
-                    <Navigation />
+                    <Navigation onFooterButtonClick={onFooterButtonClick}/>
                 </div>
             </div>
         </header>

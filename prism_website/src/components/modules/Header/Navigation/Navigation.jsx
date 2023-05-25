@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import NavLinks from '../NavLinks'
 import styles from './Navigation.module.scss'
 
-const Navigation = () => {
+const Navigation = ({ onFooterButtonClick }) => {
 
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -57,7 +57,7 @@ const Navigation = () => {
 	return (
 		<nav className={navClass} ref={node}>
 			{isOpen ? closeIcon : hamburgerIcon}
-			<NavLinks toggle={setIsOpen} />
+			<NavLinks onFooterButtonClick={onFooterButtonClick} toggle={setIsOpen} />
 		</nav>
 	)
 }

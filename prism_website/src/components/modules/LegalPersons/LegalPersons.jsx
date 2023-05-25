@@ -5,7 +5,7 @@ import styles from './LegalPersons.module.scss'
 
 const LegalPersons = ({ onButtonClick }) => {
     return (
-        <section className={styles.legalPersons} id="legalPersons">
+        <section className={styles.legalPersons}>
             <div className={styles.container}>
                 <h1 className={styles.legalPersons__headline}>Напрямки <br /> та інструменти аналізу</h1>
                 <div className={styles.legalPersons__cardsList}>

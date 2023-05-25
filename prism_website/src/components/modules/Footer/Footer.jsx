@@ -1,12 +1,11 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { menuData } from '../../data/MenuData'
 import { ReactComponent as MailIcon } from '../../../images/Footer/Mail.svg'
 import { ReactComponent as PhoneIcon } from '../../../images/Footer/Phone.svg'
 import PrismLogo from '../../../images/Footer/Logo.svg'
 import styles from './Footer.module.scss'
 
-const Footer = () => {
+const Footer = ({ onFooterButtonClick }) => {
     return (
         <section className={styles.footer}>
             <div className={styles.footer__container}>
@@ -16,7 +15,7 @@ const Footer = () => {
                         <p className={styles.footer__mailText}>prism.ra2020@gmail.com</p>
                     </div>
                     <div className={styles.footer__phoneBlock}>
-                        <PhoneIcon></PhoneIcon>
+                        <PhoneIcon />
                         <p className={styles.footer__phoneText}>+38 063 244 83 85</p>
                     </div>
                     <div className={styles.footer__copyHeaderBlock}>
@@ -24,11 +23,11 @@ const Footer = () => {
                             <img src={PrismLogo} alt="Prism logo" />
                         </a>
                         <ul>
-                            {menuData.map(({ link, title }, index) => (
+                            {menuData.map(({ title }, index) => (
                                 <li key={index}>
-                                    <NavLink to={link} className={styles.footer__link} >
+                                    <button className={styles.footer__link} onClick={() => onFooterButtonClick(index)}>
                                         {title}
-                                    </NavLink>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
