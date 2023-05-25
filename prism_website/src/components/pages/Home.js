@@ -6,28 +6,40 @@ import IndividualSolutions from '../modules/IndividualSolutions'
 
 const Home = () => {
     const legalPersonsRef = useRef(null);
-	const individualSolutionsRef = useRef(null);
+    const analysisToolsRef = useRef(null);
+    const individualSolutionsRef = useRef(null);
 
     const handleButtonClick = () => {
         legalPersonsRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-	const handleFourButtonClick = () => {
+    const handleFourButtonClick = () => {
         individualSolutionsRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const handleLegalPersonsButtonClick = (index) => {
+        if (index < 2) {
+            analysisToolsRef.current.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            handleFourButtonClick();
+        }
     };
 
     return (
         <>
             <IntroSection onButtonClick={handleButtonClick} />
             <div ref={legalPersonsRef}>
-                <LegalPersons />
+                <LegalPersons onButtonClick={handleLegalPersonsButtonClick} />
             </div>
-            <AnalysisTools onButtonClick={handleFourButtonClick} />
-			<div ref={individualSolutionsRef}>
-				<IndividualSolutions />
-			</div>
+            <div ref={analysisToolsRef}>
+                <AnalysisTools onButtonClick={handleFourButtonClick} />
+            </div>
+            <div ref={individualSolutionsRef}>
+                <IndividualSolutions />
+            </div>
         </>
     )
 }
 
 export default Home;
+
