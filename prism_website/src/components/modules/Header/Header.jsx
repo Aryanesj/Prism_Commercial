@@ -9,7 +9,11 @@ const Header = () => {
             <div className={styles.container}>
                 <div className={styles.header__wrapper}>
                     <div className={styles.header__logo}>
-                        <a href="/" className={styles.header__logoLink}>
+                        <a href="/" className={styles.header__logoLink}
+                            data-aos="zoom-out"
+                            data-aos-delay="1000"
+                            data-aos-duration="1800"
+                        >
                             <img src={logo} alt="Prism logo" />
                         </a>
                     </div>

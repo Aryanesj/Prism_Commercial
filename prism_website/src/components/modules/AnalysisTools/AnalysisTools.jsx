@@ -3,14 +3,14 @@ import { ReactComponent as ArrowRight } from '../../../images/AnalysisTools/Icon
 import { analysisToolsData } from '../../data/AnalysisToolsData'; 
 import styles from './AnalysisTools.module.scss'
 
-const AnalysisTools = () => {
+const AnalysisTools = ({ onButtonClick }) => {
     return (
         <section className={styles.tools}>
             <div className={styles.tools__container}>
                 <h1>Доступний функціонал для фізичних та юридичних осіб</h1>
                 <p className={styles.tools__p1}>Можливість опрацювання запитів у автоматичному та ручному режимі, за <span>16 напрямками.</span></p>
                 <p className={styles.tools__p2}>А також, за необхідності, пропонуємо індивідуальні рішення
-                    <button className={styles.tools__arrowRightBtn}>
+                    <button onClick={onButtonClick} className={styles.tools__arrowRightBtn}>
                         <ArrowRight className={styles.tools__arrowRight} />
                     </button>
                 </p>

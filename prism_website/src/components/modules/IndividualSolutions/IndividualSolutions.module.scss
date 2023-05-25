@@ -4,17 +4,13 @@
 
 .solutions {
   height: 628px;
-
-  @media screen and (min-width: 1368px) {
-    max-width: 1320px;
-    margin: 0 auto;
-  }
+  position: relative;
 
   background: url("../../../images/IndividualSolutions/Gradient.png") no-repeat,
     url("../../../images/IndividualSolutions/Tokyo.jpg") no-repeat;
   background-size: auto, auto;
   background-position: 100% 40%, 0px 72px;
-  padding: 64px 0 0 0; /// ???????? need to add bottom padding
+  padding: 64px 0 0 0;
 
   @media screen and (min-width: 1300px) {
     background-position: 100% 40%, 40px 72px;
@@ -33,6 +29,38 @@
     height: 1144px;
     background-position: 100% 100%, 0px 695px;
     background-size: auto, 380px 380px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 90px;
+      background: linear-gradient(
+        to right,
+        white 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        white 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   &__container {

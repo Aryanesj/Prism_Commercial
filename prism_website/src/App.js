@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/modules/Header'
 import Home from './components/pages/Home'
 import Footer from './components/modules/Footer'
-import { Routes, Route } from 'react-router-dom'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import styles from './globalStyle.module.scss';
 
 const App = () => {
+
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   return (
     <div className={styles.wrap}>
       <Header />
@@ -20,4 +27,3 @@ const App = () => {
 }
 
 export default App;
-

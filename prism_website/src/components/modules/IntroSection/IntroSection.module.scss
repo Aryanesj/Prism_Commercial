@@ -1,5 +1,6 @@
 .intro {
   height: 720px;
+  position: relative;
   background: url("../../../images/IntroSection/Group.svg") no-repeat,
     url("../../../images/IntroSection/Gradient.png") no-repeat,
     url("../../../images/IntroSection/Tokyo.jpg") no-repeat right;
@@ -9,6 +10,36 @@
   max-width: 1400px;
   padding: 212px 0 0;
   margin: 0 auto;
+
+  @media screen and (min-width: 1366px) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 90px;
+      background: linear-gradient(
+        to right,
+        white 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        white 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
 
   @media (max-width: 1078px) {
     background-position: 490px 500px, calc(100% - 65px) 75px,

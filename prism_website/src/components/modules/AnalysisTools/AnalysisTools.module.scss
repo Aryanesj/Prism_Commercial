@@ -89,16 +89,21 @@
     }
   }
 
-  &__arrowRight {
-    margin: 0 0 -3px 0px;
-  }
-
   &__arrowRightBtn {
     width: 30px;
     background: none;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
     margin: 0 0 0 24px;
+
+    &:hover {
+      width: 40px;
+    }
+  }
+
+  &__arrowRight {
+    margin: 0 0 -3px 0px;
   }
 
   &__divMain {

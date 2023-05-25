@@ -5,7 +5,7 @@ import styles from './LegalPersons.module.scss'
 
 const LegalPersons = () => {
     return (
-        <section className={styles.legalPersons}>
+        <section className={styles.legalPersons} id="legalPersons">
             <div className={styles.container}>
                 <h1 className={styles.legalPersons__headline}>Напрямки <br /> та інструменти аналізу</h1>
                     <div className={styles.legalPersons__cardsList}>
@@ -25,6 +25,7 @@ const LegalPersons = () => {
 			        </div>
             </div>
         </section>
+
     )
 }
 
