@@ -1,4 +1,4 @@
-name: BuildStaticSite
+name: Build Prism Static Site
 
 on:
   push:
@@ -28,11 +28,15 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install Dependencies
-      run: npm install
+   - name: Install Dependencies
+      run: |
+        cd prism_website
+        npm install
 
     - name: Build Static Site
-      run: npm run build
+      run: |
+        cd prism_website
+        npm run build
 
     - name: Deploy to Google Cloud Storage
       run: |
