@@ -40,6 +40,7 @@ jobs:
 
     - name: Deploy to Google Cloud Storage
       run: |
+        cd prism_website
         gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
         gsutil -m rsync -d -r build/ gs://${{ secrets.GCP_BUCKET_NAME }}
       env:
