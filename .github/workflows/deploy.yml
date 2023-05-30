@@ -1,0 +1,43 @@
+name: BuildStaticSite
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v1.1.0
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
+        create_credentials_file: true
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3.6.0
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Static Site
+      run: npm run build
+
+    - name: Deploy to Google Cloud Storage
+      run: |
+        gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+        gsutil -m rsync -d -r build/ gs://${{ secrets.GCP_BUCKET_NAME }}
+      env:
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        GCP_BUCKET_NAME: ${{ secrets.GCP_BUCKET_NAME }}
