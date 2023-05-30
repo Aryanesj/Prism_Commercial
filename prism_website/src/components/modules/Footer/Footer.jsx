@@ -12,7 +12,7 @@ const Footer = ({ onFooterButtonClick }) => {
                 <h1 className={styles.footer__title}>Контакти</h1>
                     <div className={styles.footer__mailBlock}>
                         <MailIcon />
-                        <p className={styles.footer__mailText}>------------------</p>
+                        <p className={styles.footer__mailText}>tatusko86@gmail.com</p>
                     </div>
                     <div className={styles.footer__phoneBlock}>
                         <PhoneIcon />
